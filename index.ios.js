@@ -4,6 +4,10 @@ const React = require('react-native');
 
 const Dimensions = require('Dimensions');
 
+const PageOne = require('./components/PageOne')
+const PageTwo = require('./components/PageTwo')
+const PageThree = require('./components/PageThree')
+
 const {
   height,
   weight
@@ -53,11 +57,19 @@ const CustomSceneConfig = Object.assign({}, BaseConfig, {
   }
 });
 
-class ReactNativeTutorial extends Component {
+class ReactNativeTut extends Component {
 
   // A simple switch statement to allow our router to work
   _renderScene(route, navigator) {
-
+		// Add in a switch statement
+    switch (route.id) {
+      case 1:
+        return <PageOne navigator={navigator} />
+      case 2:
+        return <PageTwo navigator={navigator} />
+      case 3:
+        return <PageThree navigator={navigator} />
+    }
   }
 
   // Plug in the animations
@@ -76,4 +88,4 @@ class ReactNativeTutorial extends Component {
   }
 }
 
-AppRegistry.registerComponent('ReactNativeTutorial', () => ReactNativeTutorial);
+AppRegistry.registerComponent('ReactNativeTut', () => ReactNativeTut);
