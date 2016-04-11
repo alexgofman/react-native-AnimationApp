@@ -1,6 +1,8 @@
 const React = require('react-native')
 const styles = require('../stylesheets/layout')
 
+const PanResponder = require('./PanResponder');
+
 // Destructured components
 const {
   Component,
@@ -23,6 +25,7 @@ class PageThree extends Component {
   render() {
     return (
       <View style={[styles.container, {backgroundColor: 'purple'}]}>
+        <PanResponder />
         <PanResponder />
         <Text style={styles.welcome}>Page three</Text>
         <TouchableHighlight onPress={this._handlePress.bind(this)}>

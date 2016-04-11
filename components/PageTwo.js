@@ -1,6 +1,7 @@
 const React = require('react-native')
 const styles = require('../stylesheets/layout')
 
+const Gestures = require('./Gestures')
 
 // Destructured components
 const {
@@ -24,6 +25,7 @@ class PageTwo extends Component {
   render() {
     return (
       <View style={[styles.container, {backgroundColor: 'blue'}]}>
+        <Gestures />
         <Text style={styles.welcome}>Page two</Text>
         <TouchableHighlight onPress={this._handlePress.bind(this)} style={{paddingVertical: 10, paddingHorizontal: 20, backgroundColor: 'black'}}>
             <Text style={styles.welcome}>Go to last page</Text>
