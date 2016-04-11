@@ -4,9 +4,9 @@ const React = require('react-native');
 
 const Dimensions = require('Dimensions');
 
-const PageOne = require('./components/PageOne')
-const PageTwo = require('./components/PageTwo')
-const PageThree = require('./components/PageThree')
+const PageOne = require('./components/PageOne');
+const PageTwo = require('./components/PageTwo');
+const PageThree = require('./components/PageThree');
 
 const {
   height,
@@ -44,7 +44,7 @@ const CustomLeftToRightGesture = Object.assign({}, BaseConfig.gestures.pop, {
   // Make it snap back really quickly after canceling pop
   snapVelocity: 8,
   // Make it so we can drag anywhere on the screen
-  edgeHitWidth: width
+  edgeHitWidth: 'width'
 });
 
 const CustomSceneConfig = Object.assign({}, BaseConfig, {
