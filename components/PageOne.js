@@ -3,6 +3,8 @@ const React = require('react-native');
 // Bring in our layout styling
 const styles = require('../stylesheets/layout');
 
+const Playground = require('./PlayGround');
+
 // Destructured components
 const {
   Component,
@@ -28,6 +30,7 @@ class PageOne extends Component {
   render() {
     return (
       <View style={[styles.container, {backgroundColor: 'green'}]}>
+        <Playground />
         <Text style={styles.welcome}>Page one</Text>
         <TouchableHighlight onPress={this._handlePress.bind(this)} style={styles.button}>
           <Text style={styles.welcome}>Go to page two</Text>
